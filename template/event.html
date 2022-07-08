@@ -1,0 +1,166 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamiloganphoto.com</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+  </head>
+  <body>
+    <section>
+      <nav>
+        <div class="wrapper">
+          <h1>Lamilogan</h1>
+
+          <div class="minidiv">
+            <ul>
+              <li><a target="blank" href="{%url 'home'%}">Home</a></li>
+              <li><a target="blank" href="{%url 'potrait' %}">Portraits </a></li>
+              <li><a target="blank" href="{%url 'event'%}">Event Coverage</a></li>
+              <li><a target="blank" href="">Drone films</a></li>
+              <li><a target="blank" href="{%url 'projet'%}">Projects</a></li>
+              <li><a target="blank" href="">Booking</a></li>
+              <li><a target="blank" href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </div>
+          <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+        
+        <img src="{% static 'svg/close.svg' %}" alt="" class="close" />
+      </nav>
+      <div class="gallery">
+        {%for topic in topic|slice:'0:1' %}
+        <div>
+          <img src="{{topic.image1.url}}" alt="" />
+        </div>
+        <div class="v-stretch">
+          <img src="{{topic.image2.url}}" alt="" />
+        </div>
+        <div class="h-stretch">
+          <img src="{{topic.image3.url}}" alt="" />
+        </div>
+       
+          <div>
+          <img src="{{topic.image4.url}}" alt="" />
+        </div>
+        
+         
+         <div class="v-stretch">
+          <img src="{{topic.image5.url}}" alt="" />
+         </div> 
+         
+        
+        <div class="big-stretch">
+          <img src="{{topic.image6.url}}" alt="" />
+        </div> 
+        <div> 
+          
+           
+          <img src="{{topic.image7.url}}" alt="" />
+        </div>
+        <div class="h-stretch">
+          <img src="{{topic.image8.url}}" alt="" />
+        </div>
+
+        <div>
+          <img src="{{topic.image9.url}}" alt="" />
+        </div>
+        <div>
+          <img src="{{topic.image10.url}}" alt="" />
+        </div>
+        <div>
+          <img src="{{topic.image7.url}}" alt="" />
+        </div>
+        <div class="big-stretch">
+          <img src="{{topic.image11.url}}" alt="" />
+        </div>
+        <div class="h-stretch">
+          <img src="{{topic.image1.url}}" alt="" />
+        </div>
+        <div class="h-stretch">
+          <img src="{{topic.image2.url}}" alt="" />
+        </div>
+        <div>
+          <img src="{{topic.image3.url}}" alt="" />
+        </div> 
+        <div>
+          <img src="{{topic.image4.url}}" alt="" />
+        </div> 
+        {%endfor%}
+      </div>
+
+      <!-- carousel -->
+      <!-- <div class="carousel">
+    <h4><a href="">Drone shots</a></h4>
+    <div class="bb-text owl-carousel ">
+      <div class="cards">
+           
+          
+           <video width="250px"  height="250px" autoplay="1"  loop controls="" muted > <source src="video/WhatsApp Video 2022-06-08 at 2.56.32 PM.mp4" type="video/mp4" > </video>
+          </div>
+      <div class="cards">     
+        <video autoplay="1" width="250px" height="250px"  loop controls="" muted> <source src="video/WhatsApp Video 2022-06-08 at 2.56.32 PM.mp4" type="video/mp4" > </video>
+          </div>
+      <div class="cards"> 
+        <video autoplay="1" width="250px" height="250px" loop controls="" muted> <source src="video/WhatsApp Video 2022-06-08 at 2.56.32 PM.mp4" type="video/mp4" > </video>
+          </div>
+      </div>
+    </div>
+   
+  </div>
+    <!  -->
+      <!-- <footer>
+    <h3>@Lamilogan</h3>
+    <h3><a href="">Email |  </a><a href=""> Instagram</a></h3>
+</footer> -->
+
+      <div class="b-text">
+        <p>Shots by Lami</p>
+      </div>
+      <div class="c-text">
+        <p><span class="auto"></span></p>
+      </div>
+      <footer>
+        <h3>@Lamilogan</h3>
+        <h3><a href="abduleedul3@gmail.com">Email | </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y="> Instagram</a></h3>
+      </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".auto", {
+        strings: [
+          " I am Lamilogan",
+          " I am a cinimatographer",
+          " I make magic",
+          " I am a film maker",
+        ],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true,
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{% static 'index.js' %}"></script>
+  </body>
+</html>

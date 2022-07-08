@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamiloganphoto.com</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+<div class="over">
+<body style="height: 1500px;">
+    <section>
+        <nav>
+            <div class="wrapper">
+                <h1>Lamilogan</h1>
+               
+                
+
+                <div class="minidiv">
+                    <ul>
+                        <li><a target="blank" href="{%url 'home'%}">Home</a></li>
+            <li><a target="blank" href="{%url 'potrait' %}">Portraits </a></li>
+              <li><a target="blank" href="{%url 'event'%}">Event Coverage</a></li>
+              <li><a target="blank" href="">Drone films</a></li>
+              <li><a target="blank" href="{%url 'projet'  %}">Projects</a></li>
+              <li><a target="blank" href="">Booking</a></li>
+              <li><a target="blank" href="{% url 'contact' %}">Contact</a></li>
+        
+                       
+                    </ul>
+                </div>
+                <div class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <img src="{% static 'svg/close.svg' %}" alt="" class="close">
+        </nav>
+        <div class="b-text">
+            <p>Shots by Lami</p>
+        </div>
+        <div class="c-text">
+            <p>  <span class="auto"></span></p>
+        </div>
+        <div class="over-j">
+{%for project in project|slice:'0:4' %}
+<div class="j-text">
+    <img src="{{project.image10.url}}" alt="" />
+    <h3><a href="{%url 'gallery' project.id   %}" style="cursor: pointer;">{{project.title}}</a></h3>
+</div>
+{%endfor%}
+        </div>  
+
+        
+<div class="end2">
+    <h3 style="color: black;">@Lamilogan</h3>
+    <h3><a href="abduleedul3@gmail.com">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y="> Instagram</a></h3>
+ </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed= new Typed(".auto",{
+            strings:[" I am Lamilogan", " I am a cinimatographer", " I make magic" , " I am a film maker",],
+            typeSpeed:100,
+            backSpeed:100,
+            loop:true
+            
+        })
+    </script>
+    <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{%static 'index.js'%}"></script>
+</body>
+</div>
+</html>
