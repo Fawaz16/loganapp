@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 import json
 import datetime
-from lamiapp.models import event_pic, main_page_pic, potraits,projects
+from lamiapp.models import event_pic, main_page_pic, potraits,projects,booking,droneshot
 
 # Create your views here.
 
@@ -36,10 +36,21 @@ def projet(request):
     return render(request, 'port.html',{'project':project})
 
 def gallery(request,post_id):
+    '''render gallery page'''
     print(post_id)
     project_1=projects.objects.get(id=post_id)
-    '''render gallery page'''
     return render(request,'gallery.html',{'project':project_1})
+
+def bookings(request):
+    '''render booking page'''
+    book=booking.objects.all()
+    return render(request, 'booking.html',{'booking':book})
+
+
+def drone_shot(request):
+    '''render drone  shots'''
+    drone=droneshot.objects.all()
+    return render(request, 'drone.html',{'drones':drone})
 
 
 

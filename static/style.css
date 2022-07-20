@@ -35,7 +35,7 @@ a{
     justify-content: space-around;
     width: 90%;
     padding-top: 55px;
-    font-size: 13px;
+    font-size: 17px;
     
 }
 .minidiv ul li a{
@@ -71,7 +71,7 @@ a{
 .close {
     width: 28px;
     position: relative;
-    left: 350px;
+    left: 320px;
     bottom: 84px;
     }
 
@@ -117,7 +117,7 @@ a{
 
 .gallery{
   padding: 10px;
-  max-width: 1100px;
+  max-width: 1500px;
   margin: 0, auto;
   display: grid;
   grid-gap: 2px;
@@ -133,12 +133,23 @@ a{
 }
 .h-stretch{
   grid-column: span 2;
+  /* grid-row: span 3; */
 }
 .big-stretch{
   grid-column: span 2;
   grid-row:span 2 ;
 }
 .gallery div img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery .h-stretch img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery .v-stretch img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -154,13 +165,20 @@ transition: transform 0.6s ease-in-out;
 -webkit-backface-visibility: hidden;
 backface-visibility: hidden;
 }
-
+.l-text h1{
+  font-family: 'Bona Nova', serif;
+}
+.j-text p{
+  text-align: center;
+  font-size: 25px;
+  padding-top: 5px;
+}
 /* main project */
 
 
 
     
-@media(max-width:735px){
+@media(max-width:770px){
     .minidiv{
         position: absolute;
         background-color: rgb(255, 255, 255);
@@ -272,18 +290,28 @@ backface-visibility: hidden;
 
 .v-stretch{
   grid-row: span 2;
+  width: 100%;
+  grid-column: span 2; 
 
 }
+.gallery .v-stretch img{
+  object-fit: cover;
+  object-position: center;
+}
 .h-stretch{
-  grid-column: span 0.5;
+  grid-column: span 2;
+  grid-row: span 2;
 }
  .big-stretch{
    grid-column:  span 1;
    grid-row: span 1;
  }
+ .special img{
+   display: none;
+ }
  .gallery{
   padding: 10px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0, auto;
   display: grid;
   grid-gap: 2px;
@@ -435,6 +463,9 @@ color: rgb(0, 0, 0);
   margin-left: 20px;
   margin-right: 20px;
 }
+.special-3{
+  display: none;
+}
 .i-text h4{
   padding: 30px 0px;
 }
@@ -502,26 +533,70 @@ margin-top: 40px;
 .over{
   height: 500px;
 }
+/* drone dhots */
+.l-text h1{
+  margin: 30px 20px ;
+  font-size: 26px;
+  font-weight: bold;
+
+  color: grey;
+  }
+
+  .shots video{
+    height: 40vh;
+    object-fit: cover;
+    object-position: center;
+    width: 300px;
+    border-radius: 20px;
+margin-left:40px ;
+
+  }
 }
 
+@media(min-width:768px){
+     .close{
+      position: relative;
+      left: 720px;
+      display: none;
+   
+    } 
+    .shots video{
+      border-radius: 20px;
+    }
+    .over-j{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    .j-text{
+      padding: 10px;
+    }
+    .overshots{
+      display: flex;
+      flex-wrap: wrap;
+    }
+}
 
-
-@media(min-width:735px){
+@media(min-width:780px){
     .wrapper{
-        max-width: 1200px;
+        max-width: 1500px;
     
     margin-left: 40px;
     }
+ 
     
     .b-text p{
       position: absolute;
       top: 90px;
-      right: 860px;
+      right: 960px;
       width: 10%;
       
       /* right: 1090px; */
       font-weight: 300;
       
+    }
+    .special-3{
+      display: none;
     }
     
     .hamburger{
@@ -532,24 +607,26 @@ margin-top: 40px;
     }
     
     .minidiv{
-      width: 70%;
+      width: 60%;
     }
-    .wrapper{
-      width: 94%;
-    }
+    /* .wrapper{
+      width: 100%;
+    }  */
     .minidiv ul{
       margin-left: 10px;
-      font-size: 0px;
-      width: 100%;
+      font-size: 17px;
+      /* width: 90%; */
+      justify-content: space-around;
     }
     .minidiv ul li{
-      font-size: 15px;
+      font-size: 5px;
       font-family: 'Bona Nova', serif;
+      /* width: 40%; */
     }
     .wrapper h1{
       position: relative;
       left: -10px;
-      font-size: 37px;
+      font-size: 30px;
     }
     
     
@@ -557,18 +634,18 @@ margin-top: 40px;
         display: flex;
         justify-content: space-between;
         width: 95%;
-        position: absolute;
-        top: 2800px;
+        position: relative;
+        top: 700px;
        
     }
     footer h3{
 font-weight: 600;
 padding-bottom: 30px;
 padding-left: 40px;
- /* padding-top: 80px;  */
+padding-top: 80px;
     }
     .carousel h4 {
-      color: rgb(0, 0, 0);
+      color:rgb(0, 0, 0);
       font-size: 32px;
       font-weight: bold;
       
@@ -663,7 +740,7 @@ padding-left: 40px;
 
       }
       body{
-        border: 3px solid lightgrey;
+        /* border: 3px solid lightgrey; */
         margin: 10px;
         border-radius: 20px;
         /* height: 2000px; */
@@ -679,6 +756,14 @@ padding-left: 40px;
       }
       .gallery{
         margin-top: 40px;
+      }
+      .special img{
+        display: none;
+
+      }
+      .h-stretch{
+        grid-column: span 2;
+        grid-row: span 3; 
       }
       .minidiv ul li{
         font-size: 19px;
@@ -809,9 +894,7 @@ padding-left: 40px;
         top: 20px;
       }
       
-      body{
-        height: 2900px;
-      }
+     
       /* contact */
       .h-text img{
         width: 50%;
@@ -897,7 +980,26 @@ height: 500px;
   line-height: 26px;
 }
 
-      }
+/* droneshots */
+.l-text h1{
+  margin: 30px 30px ;
+  font-size: 30px;
+  font-weight: bold;
+  color: grey;
+  }
+
+  .shots video{
+    height: 40vh;
+    object-fit: cover;
+    object-position: center;
+    width: 350px;
+    margin: 20px;
+  }
+  .overshots{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
       
     
 
@@ -908,8 +1010,24 @@ height: 500px;
     justify-content: space-between;
     width: 95%;
     position: relative;
-    top: -10px;
+    top: -70px;
    
+}
+.minidiv{
+  width: 70%;
+}
+.wrapper{
+  width: 100%;
+}
+.minidiv ul{
+  margin-left: 10px;
+  font-size: 17px;
+  width: 90%;
+}
+.minidiv ul li{
+  font-size: 20px;
+  font-family: 'Bona Nova', serif;
+  /* width: 70%; */
 }
 .wrapper h1{
   font-size: 76px;
@@ -921,16 +1039,21 @@ height: 500px;
   
 }
 body{
-  border: 3px solid lightgrey;
-  margin: 10px;
+  /* border: 3px solid lightgrey; */
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
   border-radius: 20px;
-  height: 2300px;
-  max-width: 1200px;
+
+
 }
 
 .gallery{
-  margin-left: 40px;
+  margin-left: 20px;
   margin-top: 20px;
+}
+.special img{
+  display: block;
 }
 .wrapper p{
   position: relative;
@@ -938,6 +1061,9 @@ body{
   right: 210px;
   font-weight: 300;
   
+}
+.special-2{
+  display: none;
 }
 .b-text p{
   position: absolute;
@@ -1210,7 +1336,7 @@ background-repeat: no-repeat;
   }
   .j-text{
     margin: 20px;
-    margin-left: 40px;
+    margin-left: 50px;
     margin-right: 50px;
     
   }
@@ -1238,6 +1364,43 @@ background-repeat: no-repeat;
   left: 180px;
   margin-top: 30px;
   line-height: 26px;
+}
+
+/* drone shots */
+
+.l-text h1{
+margin: 30px 30px ;
+font-size: 40px;
+font-weight: bold;
+color: grey;
+}
+.shots video{
+  height: 70vh;
+  object-fit: cover;
+  object-position: center;
+  width: 500px;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-left: 80px;
+}
+.overshots{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* booking */
+.m-text img{
+  width: 40%;
+}
+.m-text{
+ max-width: 300px;
+  border: 3px solid;
+  margin-right: 420px;
+}
+
+.overshots-2{
+  display: flex;
+  flex-wrap: wrap;
 }
 }
 /* 800px upward */
@@ -1267,7 +1430,7 @@ background-repeat: no-repeat;
     font-weight: 600;
   }
   .minidiv {
-    width: 90%;
+    width: 100%;
     margin-left: 40px;
 
   }

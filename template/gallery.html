@@ -20,7 +20,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
   </head>
-  <body style="height: 2300px">
+  <body style=>
     <section>
       <nav>
         <div class="wrapper">
@@ -28,13 +28,13 @@
 
           <div class="minidiv">
             <ul>
-              <li><a target="blank" href="{%url 'home'%}">Home</a></li>
-            <li><a target="blank" href="{%url 'potrait' %}">Portraits </a></li>
-              <li><a target="blank" href="{%url 'event'%}">Event Coverage</a></li>
-              <li><a target="blank" href="">Drone films</a></li>
-              <li><a target="blank" href="{%url 'projet'  %}">Projects</a></li>
-              <li><a target="blank" href="">Booking</a></li>
-              <li><a target="blank" href="{% url 'contact' %}">Contact</a></li>
+              <li><a  target="blank" href="{%url 'home' %}">Home</a></li>
+                        <li><a target="blank" href="{% url 'potrait'%}">Portraits </a></li>
+                        <li><a  target="blank" href="{%url 'event' %}">Event Coverage</a></li>
+                        <li><a  target="blank" href="{%url 'drone_shot' %}">Drone films</a></li>
+                        <li><a target="blank" href="{%url 'projet'%}">Projects</a></li>
+                        <li><a target="blank" href="{%url 'booking'%}">Booking</a></li>
+                        <li><a target="blank" href="{%url 'contact' %}">Contact</a></li>
             </ul>
           </div>
           <div class="hamburger">
@@ -43,7 +43,7 @@
             <div class="line3"></div>
           </div>
         </div>
-        <img src="{%static 'svg/close.svg'%}" alt="" class="close" />
+        <img src="{%static 'svg/close.svg' %}" alt="" class="close" />
       </nav>
       <div class="b-text">
         <p>Shots by Lami</p>
@@ -55,66 +55,127 @@
       <div class="k-text">
         <h1>{{project.title}}</h1>
         <p>
-         {{project.body}}
+          {{project.body}}
         </p>
       </div>
       <div class="gallery">
-        
+      
         <div>
-            <img src="{{project.image1.url}}" alt="">
-        </div>
-        <div class="v-stretch">
+          <img src="{{project.image1.url}}" alt="">
+      </div>
+      <div class="v-stretch">
           <img src="{{project.image2.url}}" alt="">
-        </div>
-        <div class="h-stretch">
+      </div>
+      <div class="h-stretch">
           <img src="{{project.image3.url}}" alt="">
-        </div>
-    <div>
-        <img src="{{project.image4.url}}" alt="">
-    </div>
-    <div class="v-stretch">
+      </div>
+  <div>
+      <img src="{{project.image4.url}}" alt="">
+  </div>
+  <div class="v-stretch">
       <img src="{{project.image5.url}}" alt="">
-    </div>
-    <div class="big-stretch">
+  </div>
+  <div class="big-stretch">
       <img src="{{project.image6.url}}" alt="">
-    </div>
-    <div>
+  </div>
+  <div>
       <img src="{{project.image7.url}}" alt="">
-    </div>
-    <div class="h-stretch">
+  </div>
+  <div class="v-stretch">
       <img src="{{project.image8.url}}" alt="">
-    </div>
-    
-    <div>
-      <img src="{{project.image9.url}}" alt="">
-    </div>
-    <div>
+  </div>
+  
+  <div>
       <img src="{{project.image10.url}}" alt="">
-    </div>
-    <div>
+  </div>
+  <div>
       <img src="{{project.image11.url}}" alt="">
-    </div>
-    <div class="big-stretch">
-      <img src="{{project.image10.url}}" alt="">
-    </div>
-    <div class="h-stretch">
-      <img src="{{project.image10.url}}" alt="">
-    </div>
-    <div class="h-stretch">
-      <img src="{{project.image10.url}}" alt="">
-    </div>
-    <div>
+  </div>
+  <div>
+      <img src="{{project.image12.url}}" alt="">
+  </div>
+  <div class="big-stretch">
+      <img src="{{project.image13.url}}" alt="">
+  </div>
+  <div class="h-stretch">
+      <img src="{{project.image14.url}}" alt="">
+  </div>
+  <div class="v-stretch">
+      <img src="{{project.image15.url}}" alt="">
+  </div>
+  <div>
+      <img src="{{project.image16.url}}" alt="">
+  </div>
+  <div>
+      <img src="{{project.image17.url}}" alt="">
+  </div>
+  <div>
+      <img src="{{project.image18.url}}" alt="">
+  </div>
+  <div>
+      <img src="{{project.image19.url}}" alt="">
+  </div>
+  <!-- continue -->
+      <div>
+          <img src="{{project.image19.url}}" alt="">
+      </div>
+      <div class="v-stretch">
+          <img src="{{project.image15.url}}" alt="">
+      </div>
+      <div class="h-stretch">
+          <img src="{{project.image1.url}}" alt="">
+      </div>
+  <div>
       <img src="{{project.image5.url}}" alt="">
-    </div>
-    <div>
-      <img src="{{project.image3.url}}" alt="">
-    </div>
-    
+  </div>
+  <div class="v-stretch">
+      <img src="{{project.image6.url}}" alt="">
+  </div>
+  <div class="big-stretch">
+      <img src="{{project.image7.url}}" alt="">
+  </div>
+  <div>
+      <img src="{{project.image10.url}}" alt="">
+  </div>
+  <div class="v-stretch">
+      <img src="{{project.image15.url}}" alt="">
+  </div>
+  
+  <div>
+      <img src="{{project.image15.url}}" alt="">
+  </div>
+  <div>
+      <img src="{{project.image16.url}}" alt="">
+  </div>
+  <div>
+      <img src="{{project.image18.url}}" alt="">
+  </div>
+  <div class="big-stretch">
+      <img src="{{project.image16.url}}" alt="">
+  </div>
+  <div class="h-stretch">
+      <img src="{{project.image9.url}}" alt="">
+  </div>
+  <div class="v-stretch">
+      <img src="{{project.image8.url}}" alt="">
+  </div>
+  <div>
+      <img src="{{project.image7.url}}" alt="">
+  </div>
+  <div >
+      <img src="{{project.image6.url}}" alt="">
+  </div>
+  <div class="special">
+      <img src="{{project.image5.url}}" alt="">
+  </div>
+  <div class="special">
+      <img src="{{project.image4.url}}" alt="">
+  </div>
     
     </div>
     <div class="end2">
         <h3 style="color: black;">@Lamilogan</h3>
-        <h3><a href="abduleedul3@gmail.com">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y="> Instagram</a></h3>
+        <h3><a href="mailto:abduleedul3@gmail.com">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y="> Instagram</a></h3>
      </div>
     </section>
 
@@ -134,6 +195,6 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="{%static 'index.js'%}"></script>
+    <script src="{%static 'index.js' %}"></script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 from distutils.command.upload import upload
 from email.mime import image
+from pyexpat import model
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -16,6 +17,14 @@ class main_page_pic(models.Model):
     image9=models.ImageField(upload_to='blog_image')
     image10=models.ImageField(upload_to='blog_image')
     image11=models.ImageField(upload_to='blog_image')
+    image12=models.ImageField(upload_to='blog_image')
+    image13=models.ImageField(upload_to='blog_image')
+    image14=models.ImageField(upload_to='blog_image')
+    image15=models.ImageField(upload_to='blog_image')
+    image16=models.ImageField(upload_to='blog_image')
+    image17=models.ImageField(upload_to='blog_image')
+    image18=models.ImageField(upload_to='blog_image')
+    image19=models.ImageField(upload_to='blog_image')
 
     def _str_(self):
         return self.image
@@ -34,6 +43,14 @@ class potraits(models.Model):
     image9=models.ImageField(upload_to='blog_image')
     image10=models.ImageField(upload_to='blog_image')
     image11=models.ImageField(upload_to='blog_image')
+    image12=models.ImageField(upload_to='blog_image')
+    image13=models.ImageField(upload_to='blog_image')
+    image14=models.ImageField(upload_to='blog_image')
+    image15=models.ImageField(upload_to='blog_image')
+    image16=models.ImageField(upload_to='blog_image')
+    image17=models.ImageField(upload_to='blog_image')
+    image18=models.ImageField(upload_to='blog_image')
+    image19=models.ImageField(upload_to='blog_image')
 
     def _str_(self):
         return self.image
@@ -52,6 +69,15 @@ class event_pic(models.Model):
     image9=models.ImageField(upload_to='blog_image')
     image10=models.ImageField(upload_to='blog_image')
     image11=models.ImageField(upload_to='blog_image')
+    image12=models.ImageField(upload_to='blog_image')
+    image13=models.ImageField(upload_to='blog_image')
+    image14=models.ImageField(upload_to='blog_image')
+    image15=models.ImageField(upload_to='blog_image')
+    image16=models.ImageField(upload_to='blog_image')
+    image17=models.ImageField(upload_to='blog_image')
+    image18=models.ImageField(upload_to='blog_image')
+    image19=models.ImageField(upload_to='blog_image')
+
 
     def _str_(self):
         return self.image
@@ -76,12 +102,46 @@ class projects(models.Model):
     image9=models.ImageField(upload_to='blog_image')
     image10=models.ImageField(upload_to='blog_image')
     image11=models.ImageField(upload_to='blog_image')
+    image12=models.ImageField(upload_to='blog_image')
+    image13=models.ImageField(upload_to='blog_image')
+    image14=models.ImageField(upload_to='blog_image')
+    image15=models.ImageField(upload_to='blog_image')
+    image16=models.ImageField(upload_to='blog_image')
+    image17=models.ImageField(upload_to='blog_image')
+    image18=models.ImageField(upload_to='blog_image')
+    image19=models.ImageField(upload_to='blog_image')
+
 
     def _str_(self):
         return self.title
     
     class Meta:
         ordering=['-id']
+
+class booking(models.Model):
+    title=models.CharField(max_length=200)
+    
+    body=models.TextField(blank=True)
+   
+    date_created=models.DateTimeField(auto_now_add=True)
+    image=models.ImageField(upload_to='blog_image')
+
+    def _str_(self):
+        return self.title
+    
+    class Meta:
+        ordering=['-id']
+
+
+class droneshot(models.Model):
+    video = models.FileField(upload_to='videos_uploaded',null=True)
+
+    def _str_(self):
+        return self.video
+    
+    class Meta:
+        ordering=['-id']
+
 
 
 

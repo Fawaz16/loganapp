@@ -21,7 +21,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
   </head>
-  <body style="height: 1000px;">
+  <body>
     <section>
       <nav>
         <div class="wrapper">
@@ -29,13 +29,13 @@
 
           <div class="minidiv">
             <ul>
-              <li><a target="blank" href="{%url 'home' %}">Home</a></li>
-              <li><a target="blank" href="{%url 'potrait' %}">Portraits </a></li>
-              <li><a target="blank" href="{%url 'event'%}">Event Coverage</a></li>
-              <li><a  target="blank" href="">Drone films</a></li>
-              <li><a  target="blank" href="{%url 'projet'%}">Projects</a></li>
-              <li><a  target="blank" href="">Booking</a></li>
-              <li><a  target="blank" href="{%url 'contact' %}">Contact</a></li>
+              <li><a  target="blank" href="{%url 'home' %}">Home</a></li>
+                        <li><a target="blank" href="{% url 'potrait'%}">Portraits </a></li>
+                        <li><a  target="blank" href="{%url 'event' %}">Event Coverage</a></li>
+                        <li><a  target="blank" href="{%url 'drone_shot' %}">Drone films</a></li>
+                        <li><a target="blank" href="{%url 'projet'%}">Projects</a></li>
+                        <li><a target="blank" href="{%url 'booking'%}">Booking</a></li>
+                        <li><a target="blank" href="{%url 'contact' %}">Contact</a></li>
             </ul>
           </div>
           <div class="hamburger">
@@ -44,7 +44,7 @@
             <div class="line3"></div>
           </div>
         </div>
-        <img src="svg/close.svg" alt="" class="close" />
+        <img src="{%static 'svg/close.svg'%}" alt="" class="close" />
       </nav>
       <div class="b-text">
         <p>Shots by Lami</p>
@@ -53,7 +53,7 @@
         <p><span class="auto"></span></p>
       </div>
       <div class="h-text">
-        <img src="{%static 'images/000_9WF2NH.jpg' %}" alt="" />
+        <img src="{%static 'images/000_9WF2NH.jpg'%}" alt="" />
       </div>
       <div class="i-text">
         <h4>Lamilogan</h4>
@@ -92,8 +92,8 @@
 
       </div>
       <div class="end3">
-        <h3>@Lamilogan</h3>
-        <h3><a href="abduleedul3@gmail.com">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y="> Instagram</a></h3>
+        <h3><a href="mailto:abduleedul3@gmail.com">@Lamilogan</a></h3>
+        <h3><a href="mailto:abduleedul3@gmail.com">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y="> Instagram</a></h3>
      </div>
     </section>
 
@@ -111,6 +111,6 @@
         loop: true,
       });
     </script>
-    <script src="{% static 'index.js' %}"></script>
+    <script src="{%static 'index.js'%}"></script>
   </body>
 </html>
