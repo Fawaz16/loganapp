@@ -5,7 +5,7 @@ let btext=document.querySelector(".b-text p")
 let ctext=document.querySelector(".c-text p")
 let avatar=document.querySelector(".avatar")
 let jtext=document.querySelector(".j2-text h3")
-let ktext=document.querySelector(".shots")
+let ktext=document.querySelector(".overshots")
 
 hamburger.addEventListener("click", () => {
   minidiv.style.transform = "translateX(-0px)";
