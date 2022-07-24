@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 import json
 import datetime
-from lamiapp.models import event_pic, main_page_pic, potrait,project,booking,droneshot
+from lamiapp.models import event_pic, main_page_pic, potrait_pic,project,booking,droneshot
 
 # Create your views here.
 
@@ -21,7 +21,7 @@ def contact(request):
 
 def potrait(request):
     '''render home'''
-    new_topic=potrait.objects.all()
+    new_topic=potrait_pic.objects.all()
 
     return render(request, 'portfolio.html',{'topics':new_topic})
 def event(request):

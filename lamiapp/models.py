@@ -49,7 +49,7 @@ class main_page_pic(models.Model):
 
     class Meta:
         ordering=['-id']
-class potrait(models.Model):
+class potrait_pic(models.Model):
     image1=models.ImageField(upload_to='blog_image')
     image2=models.ImageField(upload_to='blog_image')
     image3=models.ImageField(upload_to='blog_image')
