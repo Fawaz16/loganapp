@@ -298,10 +298,10 @@ backface-visibility: hidden;
   grid-column: span 2; 
 
 }
-.gallery .v-stretch img{
-  object-fit: cover;
-  object-position: center;
-}
+/* .gallery .v-stretch img{
+  
+  
+} */
 .h-stretch{
   grid-column: span 2;
   grid-row: span 2;
