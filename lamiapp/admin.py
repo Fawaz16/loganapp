@@ -1,13 +1,13 @@
 from django.contrib import admin
 
-from lamiapp.models import  booking, droneshot, event_pic, main_page_pic, potraits, projects
-from lamiapp.views import potrait
+from lamiapp.models import  booking, droneshot, event_pic, main_page_pic, potrait, project
+
 
 # Register your models here.
 admin.site.register(main_page_pic)
-admin.site.register(potraits)
+admin.site.register(potrait)
 admin.site.register(event_pic)
-admin.site.register(projects)
+admin.site.register(project)
 admin.site.register(booking)
 admin.site.register(droneshot)
 
