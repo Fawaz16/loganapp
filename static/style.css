@@ -72,7 +72,7 @@ a{
     width: 28px;
     position: relative;
     left: 320px;
-    bottom: 84px;
+    bottom: 86px;
     }
 
     footer{
@@ -81,7 +81,7 @@ a{
         width: 95%;
     }
     footer h3{
-        font-weight: 600;
+        font-weight: 600px;
         padding-bottom: 30px;
         padding-left: 20px;
         padding-top: 30px;
@@ -745,10 +745,10 @@ padding-top: 80px;
 
       }
       body{
-        /* border: 3px solid lightgrey; */
+        
         margin: 10px;
         border-radius: 20px;
-        /* height: 2000px; */
+    
       }
       .c-text p{
         position: absolute;
