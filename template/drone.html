@@ -55,8 +55,8 @@
          <div class="overshots">
            {%for drone in drones|slice:'0:8'%}
          <div class="shots">
-            <video  autostart="true"  playsinline loop  controls="" muted preload="auto" >
-                 <source src="{{drone.video.url}}" type="video/mp4" raw="true"> </video>
+            <video  autostart="true"  playsinline loop  controls="" muted preload="meta" >
+                 <source src="{{drone.video.url}}" type="video/mp4#t=0.001" raw="true"> </video>
          </div>
         {%endfor%}
          </div>
