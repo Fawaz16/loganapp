@@ -590,7 +590,7 @@ margin-left:40px ;
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-      grid-auto-rows: 400px;
+      grid-auto-rows: 500px;
       grid-auto-flow: dense;
       margin-top:30px;
     } 
@@ -628,7 +628,7 @@ margin-left:40px ;
     }
     
     .minidiv{
-      width: 60%;
+      width: 70%;
     }
     /* .wrapper{
       width: 100%;
@@ -636,7 +636,7 @@ margin-left:40px ;
     .minidiv ul{
       margin-left: 10px;
       font-size: 17px;
-      /* width: 90%; */
+      width: 90%;
       justify-content: space-around;
     }
     .minidiv ul li{
@@ -1080,8 +1080,9 @@ body{
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
-  grid-auto-rows: 390px;
+  grid-auto-rows: 500px;
   grid-auto-flow: dense;
+  object-fit: cover;
   margin-top: 30px;
   margin-left: 20px;
   margin-top: 20px;
