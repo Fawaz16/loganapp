@@ -28,7 +28,7 @@ body{
   background: url(images/lamilogan_2842129714603963787_2112372250_1_1440x1800.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 400px;
+  padding-bottom: 40px;
   /* background-size: 100%; */
  background-attachment: fixed;
   animation: change 10s infinite ease-in-out;
@@ -838,7 +838,7 @@ padding-bottom: 20px;
   background-position:center ;
   background-size: cover;
 height: 100%;
-padding-bottom: 340px;
+padding-bottom: 400px;
 
     
    }
@@ -1676,6 +1676,13 @@ margin-top: 50px;
  .gallery img:hover{
 transform: scale(1.2);
 transition: 0.4s ease-in-out;
+ }
+
+ .z-text{
+   padding-bottom: 40px;
+ }
+ #mini{
+   padding-bottom: 40px;
  }
 }
 
