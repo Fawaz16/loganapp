@@ -10,7 +10,9 @@ urlpatterns = [
     path('potrait/',views.potrait,name='potrait'),
     path('event/',views.event,name='event'),
     path('projet/',views.projet,name='projet'),
-    path('booking/',views.bookings,name='booking'),
+    path('general/',views.general,name='general'),
+    path('bookings/',views.bookings,name='bookings'),
+    
     path('drone_shot/',views.drone_shot,name='drone_shot'),
     path('gallery/<int:post_id>',views.gallery,name='gallery'),
    

@@ -1,0 +1,239 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamiloganphoto.com</title>
+    <link rel="stylesheet" href="{%static 'style.css'%}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Image Popup CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Image Popup JS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    
+  
+  </head>
+  <body >
+    <section style="background-color: rgb(0, 0, 0);">
+      <div class="wrapper">
+              
+        <h1 style="text-align: center; color: aliceblue;">Lamilogan</h1>
+  
+    
+
+    <div class="minidiv">
+        <ul>
+          <li><a  target="blank" href="{%url 'home' %}" style="color: aliceblue;">Home</a></li>
+          <li><a target="blank" href="{% url 'projet'%}" style="color: aliceblue;">Portraits </a></li>
+          <li><a  target="blank" href="{%url 'event' %}" style="color: aliceblue;">Event Coverage</a></li>
+          <li><a  target="blank" href="{%url 'drone_shot' %}" style="color: aliceblue;">Drone films</a></li>
+          <li><a target="blank" href="{%url 'bookings' %}" style="color: aliceblue;">Booking</a></li>
+          <li><a target="blank" href="{%url 'contact' %}" style="color: aliceblue;">Contact</a></li>>
+           
+           
+        </ul>
+    </div>
+    <div class="hamburger">
+      <div class="line1" style="background-color: aliceblue;"></div>
+      <div class="line2" style="background-color: aliceblue;"></div>
+      <div class="line3" style="background-color: aliceblue;"></div>
+  </div>
+</div>
+<img src="{%static 'svg/close.svg'%}" alt="" class="close" style="background-color: aliceblue;">
+<div class="y-text">
+<h1 style="color: aliceblue; "> General images</h1>
+</div>
+
+       
+<div class="gallery" > 
+
+       {%for main in main|slice:'0:1'%}
+ 
+  <div class="v-stretch">
+          <a href="{{main.image1.url}} "><img src="{{main.image1.url}}" alt=""></a>
+  </div>
+  <div class="h-stretch">
+    <a href="{{main.image2.url}} "><img src="{{main.image2.url}}" alt=""></a>
+  </div> 
+  
+<div>
+<a href="{{main.image3.url}} "><img src="{{main.image3.url}}" alt=""></a>
+</div>
+<div class="v-stretch">
+<a href="{{main.image4.url}} "><img src="{{main.image4.url}}" alt=""></a>
+</a>
+</div>
+<div class="big-stretch">
+<a href="{{main.image5.url}} "><img src="{{main.image5.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image6.url}} "><img src="{{main.image6.url}}" alt=""></a>
+</div>
+<div class="v-stretch">
+<a href="{{main.image7.url}} "><img src="{{main.image7.url}}" alt=""></a>
+</div>
+
+<div>
+<a href="{{main.image8.url}} "><img src="{{main.image8.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image9.url}} "><img src="{{main.image9.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image10.url}} "><img src="{{main.image10.url}}" alt=""></a>
+</div>
+<div class="big-stretch">
+<a href="{{main.image11.url}} "><img src="{{main.image11.url}}" alt=""></a>
+</div>
+<div class="h-stretch">
+<a href="{{main.image12.url}} "><img src="{{main.image12.url}}" alt=""></a>
+</div>
+<div class="v-stretch">
+<a href="{{main.image13.url}} "><img src="{{main.image13.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image14.url}} "><img src="{{main.image14.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image15.url}} "><img src="{{main.image15.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image16.url}} "><img src="{{main.image16.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image17.url}} "><img src="{{main.image17.url}}" alt=""></a>
+</div>
+
+
+  <div class="v-stretch">
+    <a href="{{main.image19.url}} "><img src="{{main.image18.url}}" alt=""></a>
+  </div>
+  <div class="h-stretch">
+    <a href="{{main.image20.url}} "><img src="{{main.image19.url}}" alt=""></a>
+  </div> 
+  
+<div>
+<a href="{{main.image21.url}} "><img src="{{main.image21.url}}" alt=""></a>
+</div>
+<div class="v-stretch">
+<a href="{{main.image22.url}} "><img src="{{main.image22.url}}" alt=""></a>
+</div>
+<div class="big-stretch">
+<a href="{{main.image23.url}} "><img src="{{main.image23.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image24.url}} "><img src="{{main.image24.url}}" alt=""></a>
+</div>
+<div class="v-stretch">
+<a href="{{main.image25.url}} "><img src="{{main.image25.url}}" alt=""></a>
+</div>
+
+<div>
+<a href="{{main.image26.url}} "><img src="{{main.image26.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image27.url}} "><img src="{{main.image27.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image28.url}} "><img src="{{main.image28.url}}" alt=""></a>
+</div>
+<div class="big-stretch">
+<a href="{{main.image29.url}} "><img src="{{main.image29.url}}" alt=""></a>
+</div>
+<div class="h-stretch">
+<a href="{{main.image1.url}} "><img src="{{main.image1.url}}" alt=""></a>
+</div>
+<!-- <div class="v-stretch">
+<a href="{{main.image31.url}} "><img src="{{main.image31.url}}" alt=""></a>
+</div> -->
+<div>
+<a href="{{main.image32.url}} "><img src="{{main.image32.url}}" alt=""></a>
+</div>
+<!-- <a href="{{main.29.url}} "><img src="{{main.image29.url}}" alt=""></a>
+</div>
+-->
+<div>
+<a href="{{main.image26.url}} "><img src="{{main.image26.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image27.url}} "><img src="{{main.image27.url}}" alt=""></a>
+</div>
+<div>
+<a href="{{main.image28.url}} "><img src="{{main.image28.url}}" alt=""></a>
+</div>
+
+
+{%endfor%}
+
+
+
+</div>
+    
+  
+
+  
+
+    <div class="end2">
+      <h3><a href="mailto:abduleedul3@gmail.com" style="color: aliceblue;">@Lamilogan</a></h3>
+      <h3><a href="mailto:abduleedul3@gmail.com" style="color: aliceblue;">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y=" style="color: aliceblue;"> Instagram</a></h3>
+     </div>
+    </section>
+
+   
+    <script>
+      var typed = new Typed(".auto", {
+        strings: [
+          " I am Lamilogan",
+          " I am a cinimatographer",
+          " I make magic",
+          " I am a film maker",
+        ],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true,
+      });
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+  $('.gallery').magnificPopup({
+
+    delegate:'a',
+    type:'image',
+    gallery:{
+      enabled:true 
+    }
+
+  });
+
+</script>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{%static 'index.js'%}"></script>
+  </body>
+</html>

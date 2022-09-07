@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lamiloganphoto.com</title>
-    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <link rel="stylesheet" href="{%static 'style.css'%}">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -16,65 +16,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
 <body >
-    <section>
+    <section style="background-color: black;">
         <nav>
             <div class="wrapper">
-                <h1>Lamilogan</h1>
-               
+              
+                    <h1 style="text-align: center; color: aliceblue;">Lamilogan</h1>
+              
                 
 
                 <div class="minidiv">
                     <ul>
-                        <li><a  target="blank" href="{%url 'home' %}">Home</a></li>
-                        <li><a target="blank" href="{% url 'potrait'%}">Portraits </a></li>
-                        <li><a  target="blank" href="{%url 'event' %}">Event Coverage</a></li>
-                        <li><a  target="blank" href="{%url 'drone_shot' %}">Drone films</a></li>
-                        <li><a target="blank" href="{%url 'projet'%}">Projects</a></li>
-                        <li><a target="blank" href="{%url 'booking'%}">Booking</a></li>
-                        <li><a target="blank" href="{%url 'contact' %}">Contact</a></li>
+                      <li><a  target="blank" href="{%url 'home' %}" style="color: aliceblue;">Home</a></li>
+                      <li><a target="blank" href="{% url 'projet'%}" style="color: aliceblue;">Portraits </a></li>
+                      <li><a  target="blank" href="{%url 'event' %}" style="color: aliceblue;">Event Coverage</a></li>
+                      <li><a  target="blank" href="{%url 'drone_shot' %}" style="color: aliceblue;">Drone films</a></li>
+                      <li><a target="blank" href="{%url 'bookings' %}" style="color: aliceblue;">Booking</a></li>
+                      <li><a target="blank" href="{%url 'contact' %}" style="color: aliceblue;">Contact</a></li>
         
                        
                     </ul>
                 </div>
                 <div class="hamburger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
+                    <div class="line1" style="background-color: aliceblue;"></div>
+                    <div class="line2" style="background-color: aliceblue;"></div>
+                    <div class="line3" style="background-color: aliceblue;"></div>
                 </div>
             </div>
-            <img src="{%static 'svg/close.svg' %}" alt="" class="close">
+            <img src="{%static 'svg/close.svg'%}" alt="" class="close" style="background-color: aliceblue;">
         </nav>
-        <div class="b-text">
-            <p>Shots by Lami</p>
-          </div>
-          <div class="c-text">
-            <p><span class="auto"></span></p>
-          </div>
+        <div class="y-text">
+          <h1><span class="auto"></span></h1>
+        </div>
+          
           <div class="over-j">
-              {%for booking in booking %}
 
+{%for project in project|slice:'0:5'%}
             <div class="j-text">
-                <img src="{{booking.image.url}}" alt="">
-                <h3><a href="">{{booking.title}}</a></h3>
-                <p>{{booking.body}}</p>
-            </div>
-            {%endfor%}
-            <!-- <div class="j-text">
-                <img src="images/d2_900x.jpg" alt="">
-                <h3><a href="gallery.html">Omega</a></h3>
-                <p>60$</p>
-            </div>
-            <div class="j-text">
-                <img src="images/DEADVLEI_900x.jpg" alt="">
-                <h3><a href="gallery.html">Omega</a></h3>
-                <p>60$</p> -->
+              <a href="{%url 'gallery' project.id %}">
+              <img src="{{project.image17.url}}" alt="">
+              </a>
+                <h1> <a href="{%url 'gallery' project.id %}" >{{project.title}}</a></h1>
+                
+              
             
+            </div>
+            
+            {%endfor%}
+            
+            
+           
+            
+            
+           
+            </div>
          
             
                     </div>  
                     <div class="end2">
-                        <h3 style="color: black;">@Lamilogan</h3>
-                        <h3><a href="mailto:abduleedul3@gmail.com">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y="> Instagram</a></h3>
+                      <h3><a href="mailto:abduleedul3@gmail.com" style="color: aliceblue;">@Lamilogan</a></h3>
+                      <h3><a href="mailto:abduleedul3@gmail.com" style="color: aliceblue;">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y=" style="color: aliceblue;"> Instagram</a></h3>
                      </div>
     </section>
 
@@ -83,7 +83,6 @@
       var typed = new Typed(".auto", {
         strings: [
           " I am Lamilogan",
-          " I am a cinimatographer",
           " I make magic",
           " I am a film maker",
         ],

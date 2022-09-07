@@ -1,89 +1,163 @@
+
 {%load static%}
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lamiloganphoto.com</title>
-    <link rel="stylesheet" href="{%static 'style.css' %}" />
+    <link rel="stylesheet" href="{%static 'style.css'%}">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-  </head>
-  <div class="over">
-    <body>
-      <section>
-        <nav>
-          <div class="wrapper">
-            <h1>Lamilogan</h1>
-
-            <div class="minidiv">
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+<div class="over">
+<body >
+        <section style="background-color: rgb(0, 0, 0);">
+            <div class="wrapper">
+                    
+              <h1 style="text-align: center; color: aliceblue;">Lamilogan</h1>
+        
+          
+      
+          <div class="minidiv">
               <ul>
-                <li><a  target="blank" href="{%url 'home' %}">Home</a></li>
-                <li><a target="blank" href="{% url 'potrait'%}">Portraits </a></li>
-                <li><a  target="blank" href="{%url 'event' %}">Event Coverage</a></li>
-                <li><a  target="blank" href="{%url 'drone_shot' %}">Drone films</a></li>
-                <li><a target="blank" href="{%url 'projet'%}">Projects</a></li>
-                <li><a target="blank" href="{%url 'booking'%}">Booking</a></li>
-                <li><a target="blank" href="{%url 'contact' %}">Contact</a></li>
+                <li><a  target="blank" href="{%url 'home' %}" style="color: aliceblue;">Home</a></li>
+                <li><a target="blank" href="{% url 'projet'%}" style="color: aliceblue;">Portraits </a></li>
+                <li><a  target="blank" href="{%url 'event' %}" style="color: aliceblue;">Event Coverage</a></li>
+                <li><a  target="blank" href="{%url 'drone_shot' %}" style="color: aliceblue;">Drone films</a></li>
+                <li><a target="blank" href="{%url 'bookings' %}" style="color: aliceblue;">Booking</a></li>
+                <li><a target="blank" href="{%url 'contact' %}" style="color: aliceblue;">Contact</a></li>>
+                 
               </ul>
-            </div>
-            <div class="hamburger">
-              <div class="line1"></div>
-              <div class="line2"></div>
-              <div class="line3"></div>
-            </div>
           </div>
-          <img src="{%static 'svg/close.svg' %}" alt="" class="close" />
-        </nav>
-        <div class="b-text">
-          <p>Shots by Lami</p>
-        </div>
-        <div class="c-text">
-          <p><span class="auto"></span></p>
-        </div>
-        <div class="over-j">
-          {%for topic in project|slice:'0:4' %}
-          <div class="j-text">
-            <img src="{{topic.image4.url}}" alt="" />
-            <h3><a href="{%url 'gallery' topic.id %}">{{topic.title}}</a></h3>
+          <div class="hamburger">
+              <div class="line1" style="background-color: aliceblue;"></div>
+              <div class="line2" style="background-color: aliceblue;"></div>
+              <div class="line3" style="background-color: aliceblue;"></div>
           </div>
-          {%endfor%}
-        </div>
+      </div>
+      <img src="{%static 'svg/close.svg'%}" alt="" class="close" style="background-color: aliceblue;">
+      </nav>
+        
+<div class="x-text" style="text-align: center;">
+    <h1>Book now</h1>
+    <p>SEE BELOW FOR VARIOUS PACKAGES DEALS AND BOOK YOUR SHOOT NOW!</p>
+</div>
 
-        <div class="end2">
-          <h3><a href="mailto:abduleedul3@gmail.com">@Lamilogan</a></h3>
-          <h3><a href="mailto:abduleedul3@gmail.com">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y="> Instagram</a></h3>
-        </div>
-      </section>
 
-      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-      <script>
-        var typed = new Typed(".auto", {
-          strings: [
-            " I am Lamilogan",
-            " I am a cinimatographer",
-            " I make magic",
-            " I am a film maker",
-          ],
-          typeSpeed: 100,
-          backSpeed: 100,
-          loop: true,
-        });
-      </script>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-      <script src="{%static 'index.js'%}"></script>
-    </body>
-  </div>
+
+<div class="overw">
+<div class="w-text">
+
+    <div class="w1-text">
+        <h3>Bronze</h3>
+        <hr>
+        <ul>
+            <li>1 HOUR SESSION</li>
+            <li>MAX 2 looks</li>
+            <li>3 EDITED IMAGES</li>
+        </ul>
+        <h3>130 pounds</h3>
+    </div>
+    <div class="w1-text">
+        <h3>SILVER</h3>
+        <hr>
+        <ul>
+            <li>2 HOURS</li>
+            <li>UNLIMITED LOOKS</li>
+            <li>12 EDITED IMAGES</li>
+        </ul>
+        <h3>250 pounds</h3>
+    </div>
+    <div class="w1-text">
+        <h3>GOLD PACKAGE</h3>
+        <hr>
+        <ul>
+            <li>2 HOURS SESSION</li>
+            <li>UNLIMITED LOOKS</li>
+            <li>25 IMAGES</li>
+            <li>30-SEC VIDEO INCLUDED</li>
+        </ul>
+        <h3>380 pounds</h3>
+    </div>
+    <div class="w1-text">
+        <h3>BUILD YOUR OWN PACKAGE</h3>
+        <hr>
+        <ul>
+            <li>1 HOUR SESSION</li>
+            <li>UNLIMITED LOOKS</li>
+            <li>ALL UNEDITED WATER MARKED PICTURES</li>
+            <li>4 EDITED IMAGES</li>
+            <li style="color: red;">TURNAROUND TIME -10 WORKING DAYS</li>
+        </ul>
+        <h3>150 pounds</h3>
+    </div>
+    <div class="w1-text">
+        
+        <ul>
+            <li>ADDITIONAL EDIT- <span>10 POUNDS/EDIT</span></li>
+            <li>ADDITIONAL HOUR - <span>20 pounds/HR</span></li>
+            <li>STUDIO TIME- <span>50 pounds/HR</span></li>
+            <li>EXPECTED EDITS <span style="color: red;">["NEXT WORKING DAY"]</span> <span>150 pounds/HR</span></li>
+            <li>EXPECTED EDITS <span style="color: red;">["2 WORKING DAY"]</span> <span>100 pounds/HR</span></li>
+            <li>VIDEO | REELS <span style="color: red;">["30-SEC INCREMENT"]</span> <span>100 pounds/HR</span></li>
+            <li>MAKE-UP-ARTISTE <span>80 pounds</span></li>
+        </ul>
+      
+    </div>
+</div>
+    <div class="w2-text">
+        <form action="port.html">
+            <label for="">Name*</label>
+            <input type="text" placeholder="YOUR NAME" style="font-size: 15px;">
+            <label for="">Email Address*</label>
+            <input type="email" name="" id="" placeholder="Fawaz@gmail.ccom" style="font-size: 15px;">
+            <label for="">Date*</label>
+            <input type="datetime" name="" id="" placeholder="DD/mm/YYYY" style="font-size: 15px;">
+            <div class="w3-text">
+                <label for="">Package*</label>
+            <input type="text" placeholder="WHAT PACKAGE WOULD YOU LIKE TO SHHOT?  (IF CUSTOM ADD  'ADDITIONAL NOTES')" style="font-size: 15px;">
+            </div>
+            <label for="">Social*</label>
+            <input type="url" name="" id="" placeholder="INSTAGRAM/TWITTER/WHATSAPP" style="font-size: 15px;">
+            <label for="">Contact Number*</label>
+            <input type="tel" name="" id="" placeholder="TYPE YOUR NUMBER" style="font-size: 15px;">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+       
+
+
+
+
+<div class="end2">
+    <h3><a href="mailto:abduleedul3@gmail.com" style="color: aliceblue;">@Lamilogan</a></h3>
+    <h3><a href="mailto:abduleedul3@gmail.com" style="color: aliceblue;">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y=" style="color: aliceblue;"> Instagram</a></h3>
+ </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed= new Typed(".auto",{
+            strings:[" I am Lamilogan", " I am a cinimatographer", " I make magic" , " I am a film maker",],
+            typeSpeed:100,
+            backSpeed:100,
+            loop:true
+            
+        })
+    </script>
+    <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{%static 'index.js'%}"></script>
+</body>
+</div>
 </html>

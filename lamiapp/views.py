@@ -9,9 +9,13 @@ from lamiapp.models import event_pic, main_page_pic, potrait_pic,project,booking
 
 def home(request):
     '''render home'''
-    my_topic=main_page_pic.objects.all()
 
-    return render(request, 'index.html',{'topic':my_topic})
+    return render(request, 'index.html')
+
+def general(request):
+    ''''render general image'''
+    main=main_page_pic.objects.all()
+    return render(request, 'gallery2.html', {'main':main})
 
 
 def contact(request):
@@ -33,7 +37,7 @@ def event(request):
 def projet(request):
     '''render project page'''
     projects=project.objects.all()
-    return render(request, 'port.html',{'project':projects})
+    return render(request, 'booking.html',{'project':projects})
 
 def gallery(request,post_id):
     '''render gallery page'''
@@ -43,8 +47,7 @@ def gallery(request,post_id):
 
 def bookings(request):
     '''render booking page'''
-    book=booking.objects.all()
-    return render(request, 'booking.html',{'booking':book})
+    return render(request, 'port.html')
 
 
 def drone_shot(request):

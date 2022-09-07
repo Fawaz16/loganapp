@@ -1,3 +1,4 @@
+
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
@@ -19,167 +20,186 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Image Popup CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Image Popup JS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    
+  
   </head>
-  <body style=>
-    <section>
-      <nav>
-        <div class="wrapper">
-          <h1>Lamilogan</h1>
+  <body >
+    <section style="background-color: rgb(0, 0, 0);">
+      <div class="wrapper">
+              
+        <h1 style="text-align: center; color: aliceblue;">Lamilogan</h1>
+  
+    
 
-          <div class="minidiv">
-            <ul>
-              <li><a  target="blank" href="{%url 'home' %}">Home</a></li>
-                        <li><a target="blank" href="{% url 'potrait'%}">Portraits </a></li>
-                        <li><a  target="blank" href="{%url 'event' %}">Event Coverage</a></li>
-                        <li><a  target="blank" href="{%url 'drone_shot' %}">Drone films</a></li>
-                        <li><a target="blank" href="{%url 'projet'%}">Projects</a></li>
-                        <li><a target="blank" href="{%url 'booking'%}">Booking</a></li>
-                        <li><a target="blank" href="{%url 'contact' %}">Contact</a></li>
-            </ul>
-          </div>
-          <div class="hamburger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-        </div>
-        <img src="{%static 'svg/close.svg' %}" alt="" class="close" />
-      </nav>
-      <div class="b-text">
-        <p>Shots by Lami</p>
-      </div>
-      <div class="c-text">
-        <p><span class="auto"></span></p>
-      </div>
+    <div class="minidiv">
+        <ul>
+          <li><a  target="blank" href="{%url 'home' %}" style="color: aliceblue;">Home</a></li>
+          <li><a target="blank" href="{% url 'projet'%}" style="color: aliceblue;">Portraits </a></li>
+          <li><a  target="blank" href="{%url 'event' %}" style="color: aliceblue;">Event Coverage</a></li>
+          <li><a  target="blank" href="{%url 'drone_shot' %}" style="color: aliceblue;">Drone films</a></li>
+          <li><a target="blank" href="{%url 'bookings' %}" style="color: aliceblue;">Booking</a></li>
+          <li><a target="blank" href="{%url 'contact' %}" style="color: aliceblue;">Contact</a></li>>
+           
+        </ul>
+    </div>
+    <div class="hamburger">
+        <div class="line1" style="background-color: aliceblue;"></div>
+        <div class="line2" style="background-color: aliceblue;"></div>
+        <div class="line3" style="background-color: aliceblue;"></div>
+    </div>
+</div>
 
-      <div class="k-text">
-        <h1>{{project.title}}</h1>
-        <p>
-          {{project.body}}
-        </p>
+<div class="close">
+<img src="svg/close.svg" alt=""  style="background-color: aliceblue;">
+
+</div>
+</nav>
+<div class="y-text">
+<h1 style="color: aliceblue;"> {{project.title}}</h1>
+</div>
+
+       <div class="gallery" > 
+
+       
+ 
+      <div class="v-stretch">
+              <a href="{{project.image1.url}} "><img src="{{project.image1.url}}" alt=""></a>
       </div>
-      <div class="gallery">
+      <div class="h-stretch">
+        <a href="{{project.image2.url}} "><img src="{{project.image2.url}}" alt=""></a>
+      </div> 
       
-        <div>
-          <img src="{{topic.image1.url}}" alt="">
-      </div>
-      <div >
-          <img src="{{topic.image2.url}}" alt="">
-      </div>
-      <div >
-          <img src="{{topic.image3.url}}" alt="">
-      </div>
-  <div>
-      <img src="{{topic.image4.url}}" alt="">
+   <div>
+    <a href="{{project.image3.url}} "><img src="{{project.image3.url}}" alt=""></a>
   </div>
-  <div >
-      <img src="{{topic.image5.url}}" alt="">
+  <div class="v-stretch">
+    <a href="{{project.image4.url}} "><img src="{{project.image4.url}}" alt=""></a>
+    </a>
+  </div>
+  <div class="big-stretch">
+    <a href="{{project.image5.url}} "><img src="{{project.image5.url}}" alt=""></a>
   </div>
   <div>
-      <img src="{{topic.image6.url}}" alt="">
+  <a href="{{project.image6.url}} "><img src="{{project.image6.url}}" alt=""></a>
   </div>
-  <div>
-      <img src="{{topic.image7.url}}" alt="">
-  </div>
-  <div >
-      <img src="{{topic.image8.url}}" alt="">
+   <div class="v-stretch">
+    <a href="{{project.image7.url}} "><img src="{{project.image7.url}}" alt=""></a>
   </div>
   
   <div>
-      <img src="{{topic.image10.url}}" alt="">
+    <a href="{{project.image8.url}} "><img src="{{project.image8.url}}" alt=""></a>
   </div>
   <div>
-      <img src="{{topic.image11.url}}" alt="">
+    <a href="{{project.image9.url}} "><img src="{{project.image9.url}}" alt=""></a>
   </div>
   <div>
-      <img src="{{topic.image12.url}}" alt="">
+    <a href="{{project.image10.url}} "><img src="{{project.image10.url}}" alt=""></a>
   </div>
-  <div >
-      <img src="{{topic.image13.url}}" alt="">
+  <div class="big-stretch">
+    <a href="{{project.image11.url}} "><img src="{{project.image11.url}}" alt=""></a>
   </div>
-  <div >
-      <img src="{{topic.image14.url}}" alt="">
+  <div class="h-stretch">
+    <a href="{{project.image12.url}} "><img src="{{project.image12.url}}" alt=""></a>
   </div>
-  <div >
-      <img src="{{topic.image15.url}}" alt="">
-  </div>
-  <div>
-      <img src="{{topic.image16.url}}" alt="">
+  <div class="v-stretch">
+    <a href="{{project.image13.url}} "><img src="{{project.image13.url}}" alt=""></a>
   </div>
   <div>
-      <img src="{{topic.image17.url}}" alt="">
+    <a href="{{project.image14.url}} "><img src="{{project.image14.url}}" alt=""></a>
   </div>
   <div>
-      <img src="{{topic.image18.url}}" alt="">
+    <a href="{{project.image15.url}} "><img src="{{project.image15.url}}" alt=""></a>
   </div>
   <div>
-      <img src="{{topic.image19.url}}" alt="">
+    <a href="{{project.image16.url}} "><img src="{{project.image16.url}}" alt=""></a>
   </div>
-  <!-- continue -->
-      <div>
-          <img src="{{topic.image20.url}}" alt="">
+  <div>
+    <a href="{{project.image17.url}} "><img src="{{project.image17.url}}" alt=""></a>
+  </div>
+
+   
+      <div class="v-stretch">
+        <a href="{{project.image19.url}} "><img src="{{project.image18.url}}" alt=""></a>
       </div>
-      <div>
-          <img src="{{topic.image21.url}}" alt="">
-      </div>
-      <div >
-          <img src="{{topic.image22.url}}" alt="">
-      </div>
-  <div>
-      <img src="{{topic.image23.url}}" alt="">
+      <div class="h-stretch">
+        <a href="{{project.image20.url}} "><img src="{{project.image19.url}}" alt=""></a>
+      </div> 
+      
+   <div>
+    <a href="{{project.image21.url}} "><img src="{{project.image21.url}}" alt=""></a>
+  </div>
+  <div class="v-stretch">
+    <a href="{{project.image22.url}} "><img src="{{project.image22.url}}" alt=""></a>
+  </div>
+  <div class="big-stretch">
+    <a href="{{project.image23.url}} "><img src="{{project.image23.url}}" alt=""></a>
   </div>
   <div>
-      <img src="{{topic.image24.url}}" alt="">
+    <a href="{{project.image24.url}} "><img src="{{project.image24.url}}" alt=""></a>
   </div>
-  <div >
-      <img src="{{topic.image25.url}}" alt="">
-  </div>
-  <div>
-      <img src="{{topic.image26.url}}" alt="">
-  </div>
-  <div >
-      <img src="{{topic.image27.url}}" alt="">
+  <div class="v-stretch">
+    <a href="{{project.image25.url}} "><img src="{{project.image25.url}}" alt=""></a>
   </div>
   
   <div>
-      <img src="{{topic.image28.url}}" alt="">
+    <a href="{{project.image26.url}} "><img src="{{project.image26.url}}" alt=""></a>
   </div>
   <div>
-      <img src="{{topic.image29.url}}" alt="">
+    <a href="{{project.image27.url}} "><img src="{{project.image27.url}}" alt=""></a>
   </div>
   <div>
-      <img src="{{topic.image30.url}}" alt="">
+    <a href="{{project.image28.url}} "><img src="{{project.image28.url}}" alt=""></a>
   </div>
-  <div >
-      <img src="{{topic.image31.url}}" alt="">
+  <div class="big-stretch">
+    <a href="{{project.image29.url}} "><img src="{{project.image29.url}}" alt=""></a>
   </div>
-  <div >
-      <img src="{{topic.image32.url}}" alt="">
+  <div class="h-stretch">
+    <a href="{{project.image1.url}} "><img src="{{project.image1.url}}" alt=""></a>
   </div>
-  <div >
-      <img src="{{topic.image33.url}}" alt="">
+  <!-- <div class="v-stretch">
+    <a href="{{project.image31.url}} "><img src="{{project.image31.url}}" alt=""></a>
+  </div> -->
+  <div>
+    <a href="{{project.image32.url}} "><img src="{{project.image32.url}}" alt=""></a>
+  </div>
+    <!-- <a href="{{project.29.url}} "><img src="{{project.image29.url}}" alt=""></a>
+  </div>
+    -->
+  <div>
+    <a href="{{project.image26.url}} "><img src="{{project.image26.url}}" alt=""></a>
   </div>
   <div>
-      <img src="{{topic.image34.url}}" alt="">
+    <a href="{{project.image27.url}} "><img src="{{project.image27.url}}" alt=""></a>
   </div>
-  <div >
-      <img src="{{topic.image35.url}}" alt="">
+  <div>
+    <a href="{{project.image28.url}} "><img src="{{project.image28.url}}" alt=""></a>
   </div>
-  <div >
-      <img src="{{topic.image36.url}}" alt="">
-  </div>
-  <div >
-      <img src="{{topic.image37.url}}" alt="">
-  </div> 
+
+  
+  
+  
+  
     
     </div>
-    <div class="end2">
-      <h3><a href="mailto:abduleedul3@gmail.com">@Lamilogan</a></h3>
-        <h3><a href="mailto:abduleedul3@gmail.com">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y="> Instagram</a></h3>
-     </div>
+
+
+    
+  
+
+  
+
+    <footer>
+      <h3><a href="mailto:abduleedul3@gmail.com" style="color: aliceblue;">@Lamilogan</a></h3>
+        <h3><a href="mailto:abduleedul3@gmail.com" style="color: aliceblue;">Email |  </a><a href="https://instagram.com/lamilogan?igshid=YmMyMTA2M2Y=" style="color: aliceblue;"> Instagram</a></h3>
+  </footer>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   
     <script>
       var typed = new Typed(".auto", {
         strings: [
@@ -193,8 +213,32 @@
         loop: true,
       });
     </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+  $('.gallery').magnificPopup({
+
+    delegate:'a',
+    type:'image',
+    gallery:{
+      enabled:true 
+    }
+
+  });
+
+</script>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="{%static 'index.js' %}"></script>
+    <script src="index.js"></script>
   </body>
 </html>
