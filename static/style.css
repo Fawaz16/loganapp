@@ -142,33 +142,39 @@ body{
 .owl-dot.active {
   background-color: rgb(168, 168, 161) !important;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 .gallery{
   padding: 10px;
   max-width: 1500px;
   margin: 0, auto;
   display: grid;
-  grid-gap: 8px;
+  grid-gap: 6px;
   overflow: hidden;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  grid-auto-rows: 210px;
   grid-auto-flow: dense;
+  object-fit: cover;
   margin-top: 30px;
-  margin-right: 60px;
+  margin-right: 10px;
 }
 
 
 
 .v-stretch{
-  grid-row: span 1;
+  /* grid-row: span 1; */
+  object-fit: cover;
   
 }
 .h-stretch{
-  grid-column: span 2;
-  /* grid-row: span 3; */
+  /* grid-column: span 2; */
+   /* grid-row: span 3; */
+   object-fit: cover;
 }
-.big-stretch{
-  grid-column: span 1;
+ .big-stretch{
+  /* grid-column: span 1;  */
+  object-fit: cover;
 
  
 }
@@ -245,10 +251,10 @@ backface-visibility: hidden;
      
 
 .v-stretch{
-  grid-row: span 2;
-  width: 50%;
+  /* grid-row: span 2; */
   width: 100%;
-  grid-column: span 2; 
+  width: 100%;
+  /* grid-column: span 2;  */
 
 }
 .gallery .v-stretch img{
@@ -256,12 +262,14 @@ backface-visibility: hidden;
   object-position: center;
 }
 .h-stretch{
-  grid-column: span 2;
-  grid-row: span 2;
+  /* grid-column: span 2;
+  grid-row: span 1.;
+  object-fit: cover;
+  width: 80%; */
 }
  .big-stretch{
-   grid-column:  span 1;
-   grid-row: span 1;
+   /* grid-column:  span 2;
+   grid-row: span 2; */
  }
  .special img{
    display: none;
@@ -271,9 +279,9 @@ backface-visibility: hidden;
   max-width: 1200px;
   margin: 0, auto;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit,minmax(130px,1fr));
-  grid-auto-rows: 200px;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  grid-auto-rows: 160px;
   grid-auto-flow: dense;
   margin-top:30px;
   margin-right: 0px;
@@ -402,10 +410,11 @@ backface-visibility: hidden;
 }
 /* contact */
 .h-text img{
-  width: 90%;
-  height: 380px;
+  width: 100%;
+  height: 100%;
   margin-top: 40px;
-  margin-left: 20px;
+  object-fit: cover;
+
   margin-right:20px ;
 }
 .i-text{
@@ -504,7 +513,7 @@ padding: 0;
 overflow: hidden;
 animation: change 40s infinte ease-in-out;
     background-repeat: no-repeat;
-    padding-bottom: 250px;
+    padding-bottom: 290px;
       
      }
    .z-text p{
@@ -518,15 +527,7 @@ animation: change 40s infinte ease-in-out;
        padding-top: 220px;
        font-weight: 200;
      }
-     .z-text h1::after{
-       content: "";
-       background-color: #ff0202;
-       width: 300px;
-       right:40px;
-       top: 255px;
-       height: 2px;
-       position: absolute;
-     }
+   
      .z1-text{
        display: flex;
        justify-content: space-around;
@@ -853,15 +854,7 @@ padding-bottom: 400px;
      padding-top: 230px;
      font-weight: 200;
    }
-   .z-text h1::after{
-     content: "";
-     background-color: #828c6d;
-     width: 700px;
-     right:50px;
-     top: 290px;
-     height: 4px;
-     position: absolute;
-   }
+
    .y-text h1{
      font-size: 50px;
      color: azure;
@@ -1637,15 +1630,7 @@ color: grey;
    padding-top: 220px;
    font-weight: 200;
  }
- .z-text h1::after{
-   content: "";
-   background-color: #828c6d;
-   width: 1100px;
-   right:100px;
-   top: 320px;
-   height: 4px;
-   position: absolute;
- }
+ 
  .y-text h1{
    font-size: 70px;
    color: azure;
