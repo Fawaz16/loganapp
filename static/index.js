@@ -22,8 +22,8 @@ hamburger.addEventListener("click", () => {
   }
 });
 closebtn.addEventListener("click", () => {
-  minidiv.style.transform = "translateX(-768px)";
-  if ((minidiv.style.transform = "translateX(-768px)")) {
+  minidiv.style.transform = "translateX(768px)";
+  if ((minidiv.style.transform = "translateX(768px)")) {
     hamburger.style.display = "block";
     closebtn.style.display = "none";
     btext.style.display="block"

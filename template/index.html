@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
@@ -25,12 +26,27 @@
             <button><a href="{%url 'projet'%}" style="color: black;">Potrait work</a></button>
             <button><a href="{%url 'general'%}" style="color: black;">All images</a></button>
         </div>
+
+
+        <div>
+            <ion-icon name="moon-outline" class="switch"></ion-icon>
+        </div>
+
+
+
+
+
+
+
         <footer id="mini">
 
         <h3 style="color: aliceblue;" > @Lamilogan</h3>
         <h3><a href="" style="color: aliceblue;">Email |  </a><a href="" style="color: aliceblue;"> Instagram</a></h3>
     </footer> 
     </div>
+    
+
+
     
 </div>
 
@@ -41,9 +57,13 @@
     </section>
 
   
- 
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
 
-
+<script>
+    $(".switch").click(function(){
+        $("body").toggleClass("dark-mode");
+    });
+</script>
 
 
 
@@ -81,6 +101,14 @@
             
         })
     </script>
+<script>
+    $(".switch").click(function(){
+        $("body").toggleClass("dark-mode");
+    });
+</script>
+
+
+
     <script src= "https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="index.js"></script>
