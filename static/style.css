@@ -5,6 +5,43 @@
   text-decoration: none;
   font-family: "popins", sans-serif;
 }
+
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  box-shadow: 5px 5px 5px rgb(19, 19, 19);
+  transition: 0.5s ease-in-out;
+  z-index: 10;
+}
+
+
+
+
+
+
+
+
+.active{
+    border-bottom: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 a{
     color: black;
     
@@ -15,23 +52,8 @@ body{
  
 }
 
-.wrapper{
-    display: flex;
-    justify-content: space-between;
-  position: fixed;
-  top: 0;
- 
-  left: 0;padding-left: 20px;
-  right: 0;
-  padding-left: 20px;
-  background-color: #000000;
-  box-shadow: 6px 6px 6px rgb(66, 66, 66);
 
-  
-}
-.y-text{
-  margin-top: 100px;
-}
+
 
 /* index page */
 
@@ -151,6 +173,7 @@ body{
         padding-bottom: 30px;
         padding-left: 20px;
         padding-top: 30px;
+        font-size: 17px;
             }
 
 
@@ -224,9 +247,7 @@ backface-visibility: hidden;
 .l-text h1{
   font-family: 'Bona Nova', serif;
 }
-.j-text p{
 
-}
 /* main project */
 
 
@@ -239,9 +260,7 @@ backface-visibility: hidden;
   /* color: azure; */
 
 }
-.dark-mode{
-  
-}
+
 :root{
   --primary-colour:#edf2fc;
   --seconday-colour:#212121;
@@ -286,14 +305,7 @@ backface-visibility: hidden;
     }
 
 
-    .wrapper{
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      background-color: #212121;
-     
-    }
+    
     .wrapper h1{
         padding-left: 20px;
         font-weight: 600;
@@ -614,14 +626,12 @@ animation: change 40s infinte ease-in-out;
      footer{
        padding-top: 70px;
      }
-     .y-text{
-       margin-top: 120px;
-     }
+     
      .y-text h1{
       font-size: 45px;
       color: azure;
       text-align: center;
-      padding-top: 50px;
+      padding-top: 10px;
       font-weight: 200;
     }
     /* .y-text h1::after{
@@ -668,22 +678,6 @@ padding-bottom: 20px;
       margin-top: 30px;
     }
 
-    .j-text:hover{
-      /* background: url(images/285268551_735353890925556_2490762586250558747_n.jpg); */
-    opacity: 0.7;
-      padding: 0;
-      transition: 0.4s ease-in-out ;
-      text-align:center ;
-      margin-top: 20px;
-      max-width:50%;
-      /* transform: scale(1.34px); */
-      margin-left: 30px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 80vh;
-  
-    }
     .j-text h4{
       font-size: 23px;
       padding-top: 50px;
@@ -746,6 +740,8 @@ padding-bottom: 20px;
    .w1-text ul li{
      color: aliceblue;
      font-size: 16px;
+     position: relative;
+left: -30px;
  
    }
 
@@ -936,7 +932,7 @@ padding-bottom: 400px;
    .y-text h1{
      font-size: 50px;
      color: azure;
-     padding-top: 40px;
+     padding-top: 10px;
      font-weight: 200;
      text-align: center;
    }
@@ -1009,6 +1005,8 @@ padding-bottom: 400px;
   }
   .w1-text ul li{
     color: aliceblue;
+    position: relative;
+left: -30px;
 
   }
 
@@ -1016,6 +1014,7 @@ padding-bottom: 400px;
   display: flex;
   margin-top: 50px;
   justify-content: space-between;
+  margin-left: 40px;
   
 }
 
@@ -1063,11 +1062,7 @@ padding-bottom: 400px;
 }
 
 @media(min-width:780px){
-    .wrapper{
-        max-width: 1500px;
-    
-    margin-left: 0px;
-    }
+  
  
     
    
@@ -1279,14 +1274,14 @@ padding-top: 80px;
         margin-left: 20px;
         margin-right:20px ;
       }
-      .i-text{
+      /* .i-text{
         margin-left: 20px;
         margin-right: 20px;
         max-width: 300px;
         position: relative;
         left: 500px;
         bottom: 600px;
-      }
+      } */
       .i-text h4{
         padding: 30px 0px;
         font-size: 20px;
@@ -1425,11 +1420,7 @@ padding-top: 80px;
 .minidiv{
   width: 70%;
 }
-.wrapper{
-  width: 100%;
-  z-index:10 ;
 
-}
 .minidiv ul{
   margin-left: 10px;
   font-size: 17px;
@@ -1514,14 +1505,14 @@ padding-top: 80px;
   margin-left: 20px;
   margin-right:20px ;
 }
-.i-text{
+/* .i-text{
   margin-left: 20px;
   margin-right: 20px;
   max-width: 600px;
   position: relative;
   left: 570px;
   bottom: 700px;
-}
+} */
 .i-text h4{
   padding: 30px 0px;
 }
@@ -1718,7 +1709,7 @@ color: grey;
  .y-text h1{
    font-size: 70px;
    color: azure;
-   padding-top: 70px;
+   padding-top: 10px;
    text-align: center;
    font-weight: 200;
  }
