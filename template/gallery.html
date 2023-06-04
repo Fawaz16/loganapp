@@ -131,92 +131,92 @@
     <a href="{{project.image7.url}} "><img src="{{project.image7.url}}" alt=""></a>
   </div>
   
-  <div>
+  <div class="reveal active">
     <a href="{{project.image8.url}} "><img src="{{project.image8.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image9.url}} "><img src="{{project.image9.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image10.url}} "><img src="{{project.image10.url}}" alt=""></a>
   </div>
-  <div class="big-stretch">
+  <div class="big-stretch reveal">
     <a href="{{project.image11.url}} "><img src="{{project.image11.url}}" alt=""></a>
   </div>
-  <div class="h-stretch">
+  <div class="h-stretch reveal">
     <a href="{{project.image12.url}} "><img src="{{project.image12.url}}" alt=""></a>
   </div>
-  <div class="v-stretch">
+  <div class="v-stretch reveal">
     <a href="{{project.image13.url}} "><img src="{{project.image13.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image14.url}} "><img src="{{project.image14.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image15.url}} "><img src="{{project.image15.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image16.url}} "><img src="{{project.image16.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image17.url}} "><img src="{{project.image17.url}}" alt=""></a>
   </div>
 
    
-      <div class="v-stretch">
+      <div class="v-stretch reveal">
         <a href="{{project.image19.url}} "><img src="{{project.image18.url}}" alt=""></a>
       </div>
-      <div class="h-stretch">
+      <div class="h-stretch reveal">
         <a href="{{project.image20.url}} "><img src="{{project.image19.url}}" alt=""></a>
       </div> 
       
-   <div>
+   <div class="reveal">
     <a href="{{project.image21.url}} "><img src="{{project.image21.url}}" alt=""></a>
   </div>
-  <div class="v-stretch">
+  <div class="v-stretch reveal" >
     <a href="{{project.image22.url}} "><img src="{{project.image22.url}}" alt=""></a>
   </div>
-  <div class="big-stretch">
+  <div class="big-stretch reveal">
     <a href="{{project.image23.url}} "><img src="{{project.image23.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image24.url}} "><img src="{{project.image24.url}}" alt=""></a>
   </div>
-  <div class="v-stretch">
+  <div class="v-stretch reveal">
     <a href="{{project.image25.url}} "><img src="{{project.image25.url}}" alt=""></a>
   </div>
   
-  <div>
+  <div class="reveal">
     <a href="{{project.image26.url}} "><img src="{{project.image26.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image27.url}} "><img src="{{project.image27.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image28.url}} "><img src="{{project.image28.url}}" alt=""></a>
   </div>
-  <div class="big-stretch">
+  <div class="big-stretch reveal">
     <a href="{{project.image29.url}} "><img src="{{project.image29.url}}" alt=""></a>
   </div>
-  <div class="h-stretch">
+  <div class="h-stretch reveal">
     <a href="{{project.image1.url}} "><img src="{{project.image1.url}}" alt=""></a>
   </div>
   <!-- <div class="v-stretch">
     <a href="{{project.image31.url}} "><img src="{{project.image31.url}}" alt=""></a>
   </div> -->
-  <div>
+  <div class="reveal">
     <a href="{{project.image32.url}} "><img src="{{project.image32.url}}" alt=""></a>
   </div>
     <!-- <a href="{{project.29.url}} "><img src="{{project.image29.url}}" alt=""></a>
   </div>
     -->
-  <div>
+  <div class="reveal">
     <a href="{{project.image26.url}} "><img src="{{project.image26.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image27.url}} "><img src="{{project.image27.url}}" alt=""></a>
   </div>
-  <div>
+  <div class="reveal">
     <a href="{{project.image28.url}} "><img src="{{project.image28.url}}" alt=""></a>
   </div>
 
@@ -253,6 +253,27 @@
         loop: true,
       });
     </script>
+    
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+      
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal')
+      
+        for(var i =0; i < reveals.length; i++){
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+      
+          if (revealtop < windowheight -revealpoint) {
+            reveals[i].classList.add('active');
+          }
+          else{
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+      </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>

@@ -27,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 </head>
-<body >
+<body style="background-color: black;" >
     <section style="background-color: black;">
       <nav class="position-sticky navbar navbar-expand-lg px-5 py-4" id="nav">
         <a class="navbar-brand fs-1 fw-bold text-light" href="{%url 'home'%}"
@@ -86,14 +86,12 @@
         </div>
       </nav>
        
-        <div class="y-text">
-          <h1><span class="auto"></span></h1>
-        </div>
+        
           
           <div class="over-j">
 
 {%for project in project|slice:'0:5'%}
-            <div class="j-text">
+            <div class="j-text reveal active">
               <a href="{%url 'gallery' project.id %}">
               <img src="{{project.image17.url}}" alt="">
               </a>
@@ -121,6 +119,28 @@
                      </div>
     </section>
 
+
+
+    <script type="text/javascript">
+      window.addEventListener('scroll', reveal);
+      
+      function reveal(){
+        var reveals = document.querySelectorAll('.reveal')
+      
+        for(var i =0; i < reveals.length; i++){
+          var windowheight = window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint = 150;
+      
+          if (revealtop < windowheight -revealpoint) {
+            reveals[i].classList.add('active');
+          }
+          else{
+            reveals[i].classList.remove('active');
+          }
+        }
+      }
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       var typed = new Typed(".auto", {
